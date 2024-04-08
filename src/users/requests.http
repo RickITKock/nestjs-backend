@@ -4,7 +4,17 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "asdf@gmail.com",
+    "email": "test@test.com",
+    "password": "aodmnfasiodioa"
+}
+
+### Sign in
+
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
     "password": "aodmnfasiodioa"
 }
 
@@ -30,10 +40,10 @@ Content-Type: application/json
     "password": "password"
 }
 
-### Set a color
+### Get the currently signed in user
 
-GET http://localhost:3000/auth/colors/red
+GET http://localhost:3000/auth/whoami
 
-### Get color
+### Sign out
 
-GET http://localhost:3000/auth/colors
+POST http://localhost:3000/auth/signout
