@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { MessagesModule } from './messages/messages.module';
 import { ReportsModule } from './reports/reports.module';
 import { UsersModule } from './users/users.module';
 import { User } from './users/user.entity';
@@ -16,7 +15,6 @@ import { Report } from './reports/report.entity';
       entities: [User, Report],
       synchronize: true,
     }),
-    MessagesModule,
     ReportsModule,
     UsersModule,
   ],
