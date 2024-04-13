@@ -14,7 +14,7 @@ import {
 import { AuthGuard } from '../guards/auth.guard'
 import { Serialize } from '../interceptors/serialize.interceptor';
 import { AuthService } from './auth.service';
-import { currentUser } from './decorators/current-user.decorators';
+import { CurrentUser } from './decorators/current-user.decorators';
 import { CreateUserDto } from './dtos/create-user.dto';
 import { UpdateUserDto } from './dtos/update-user.dto';
 import { UserDto } from './dtos/user.dto';
@@ -31,7 +31,9 @@ export class UsersController {
 
   @Get('/whoami')
   @UseGuards(AuthGuard)
-  whoAmI(@currentUser() user: User) {
+  whoAmI(@CurrentUser() user: User) {
+    console.log(user);
+    
     return user;
   }
 
