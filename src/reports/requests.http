@@ -1,0 +1,36 @@
+### Create a new Report
+
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+  "make": "Toyota",
+  "model": "Corolla",
+  "year": 1980,
+  "mileage": 100000,
+  "lng": 0,
+  "lat": 0,
+  "price": 500000
+}
+
+### Find a particular user with a given ID
+
+# GET http://localhost:3000/auth/3
+
+# ### Find all users with a given email
+
+# GET http://localhost:3000/auth?email=asdf@gmail.com
+
+# ### Delete a particular user with a given ID
+
+# DELETE http://localhost:3000/auth/6
+
+# ### Update a user
+
+# PATCH http://localhost:3000/auth/3
+# Content-Type: application/json
+
+# {
+#     "email": "aaa@aaa.com",
+#     "password": "password"
+# }
